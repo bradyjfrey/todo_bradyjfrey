@@ -1,0 +1,114 @@
+/*
+Theme Name: Things to do - MooTools version
+Theme URI: http://dotfive.com
+Description: Things to do before I die. 3 column list with completed single pages.
+Version: 1.75 HTML
+Author: Brady J. Frey
+*/
+
+* {padding: 0;margin: 0;}
+body {font-size: 80%;line-height: 125%;text-align: left;font-family: gotham,helvetica,verdana;}
+#todo {background-color: #180000;color: #FFEDD4;}
+#completed {background-color: #01011B;color: #FFEDD4;}
+h1 a {width: 100%;height: 145px;display: block;text-indent: -9999px;text-decoration: none;}
+h2 {width: 100%;height: 31px;display: block;text-indent: -9999px;}
+#completed h5 {color: #3B3BA0;font-size: 18px;padding: 15px 0 0 0;}
+#todo h1 a {background: #A40000 url(images/header.gif) no-repeat top left;}
+#todo h2 {background: #3F0000 url(images/header_sub.gif) no-repeat top left;}
+#completed h1 a {background: #3B3BA0 url(images/completed_header.gif) no-repeat top left;}
+#completed h2 {background: #1C1C6B url(images/completed_header_sub.gif) no-repeat top left;}
+#completed h3 {font-weight: normal;font-size: 24px;padding: 0 0 10px 0;}
+#completed h3 strong {color: #3B3BA0;font-weight: normal;}
+#completed h4 {font-weight: bold;color: #3B3BA0;font-size: 18px;padding: 0 0 20px 0;}
+#completed h4 strong {font-weight: normal;}
+#completed h4 sup {font-size: 9px;}
+#completed h6 {font-weight: bold;color: #3B3BA0;font-size: 12px;padding: 5px 0;border: 1px solid #1c1c6b;border-width: 1px 0px;margin-bottom: 20px;}
+#completed h6 strong {font-weight: normal;}
+#completed h6 sup {font-size: 9px;}
+#todo cite {cursor: pointer;}
+img {border: none;}
+.edit {display: block;padding: 10px 0;}
+.edit a {background-color: orange;padding: 5px;color: black;}
+.edit a:hover {background-color: white;}
+#admin a {width: 20px;height: 20px;display: block;text-indent: -9999px;position: absolute;top: 151px;right: 10px;text-decoration: none;border: none;}
+#todo #admin a {background: #3F0000 url(images/lock.gif) no-repeat top left;}
+#completed #admin a {background: #1C1C6B url(images/completed_lock.gif) no-repeat top left;}
+#completed blockquote {background: #0B0B4E url(images/quote.gif) no-repeat top left;padding: 5px 10px;font-weight: bold;}
+#todo #copyright {font-size: 10px;background: #3F0000;color: black;text-align: center;padding: 10px 0;width: 100%;clear: both;}
+#completed #copyright {font-size: 10px;background: #08083C;color: #3B3BA0;text-align: center;padding: 10px 0;width: 100%;clear: both;}
+.readmore a {position: relative;right: 10px;background: #180000 url(images/readtheadventure.gif) no-repeat top left;text-indent: -9999px;display: block;width: 151px;height: 26px;}
+.readmore a:hover {background-position: bottom left;}
+
+
+/**** Completed full page ****/
+#gallery dl {padding: 15px 0 10px 5px;}
+#gallery dt {}
+#gallery dd {padding: 0 0 10px 0;}
+#gallery dd a {font-weight: bold;color: #3B3BA0;}
+#gallery dd a:hover {text-decoration: none;color: #fff;background-color: #3B3BA0;}
+#single p {color: white;padding: 10px 40px 10px 0;line-height: 1.5;font-size: 12px;}
+#single p a {font-weight: bold;color: #3B3BA0;}
+#single p a:hover {text-decoration: none;color: #fff;background-color: #3B3BA0;}
+#gallery {float: right;width: 300px;padding-left: 40px;}
+#gallery h4 {padding: 15px 0 0 5px;}
+#gallery ul li {list-style-type: none;padding: 5px;float: left;}
+#gallery ul li img {border: none;}
+#gallery ul li a {border: 4px solid #1C1C6B;display: block;text-decoration: none;width: 50px;height: 50px;overflow: hidden;}
+#gallery ul li a:hover {border-color: #3B3BA0;}
+#gallery cite {color: #3B3BA0;font-style: normal;font-size: 11px;padding: 0 0 0 5px;}
+
+/**** Containing Elements ****/
+#container {width: 900px;}
+#single {padding: 23px 64px;}
+#brady, #sheryl, #complete {padding: 20px 0;width: 300px;position: relative;left: 64px;}
+#brady, #sheryl, #complete {float: left;clear: right;}
+#brady h4, #sheryl h4, #complete h4 {width: 134px;height: 22px;display: block;text-indent: -9999px;background: #180000 url(images/header_brady.gif) no-repeat top left;padding: 10px 0 0 0;}
+#sheryl h4 {width: 140px;background-image: url(images/header_sheryl.gif);}
+#complete h4 {width: 129px;background-image: url(images/header_completed.gif);}
+#brady ol, #sheryl ol, #complete ol {padding: 0 20px 20px 20px;}
+#brady ol li, #sheryl ol li {padding: 2px 5px 2px 0;color: #A40000;}
+#complete ol li {padding: 2px 5px 15px 0;color: #A40000;}
+#brady ol li h5, #sheryl ol li h5 {color: #FFEDD4;padding: 0 0 0 0;}
+#complete ol li h5 {color: #FFEDD4;padding: 0 0 0 0;text-decoration: line-through;}
+#brady ol li h5 cite, #sheryl ol li h5 cite, #complete ol li h5 cite {padding: 0 0 0 10px;position: relative;top: 3px;}
+#brady ol li h5 cite a, #sheryl ol li h5 cite a {text-decoration: none;}
+#brady ol li ol, #sheryl ol li ol, #complete ol li ol {list-style-type: disc;list-style-position: inside;padding: 0 0 0 5px;}
+#brady ol li ol li, #sheryl ol li ol li, #complete ol li ol li {color: #FF0000;padding: 5px 15px 5px 10px;list-style-type: none;}
+#brady ol li ol li p strong, #sheryl ol li ol li p strong, #complete ol li ol li p strong {font-size: 70%;padding: 5px 0 0 0;display: block;}
+.alttodoc {background: transparent url(images/anglepattern.gif) repeat top left;border-top: 1px solid #0a0000;border-bottom: 1px solid #0a0000;}
+.alttodoc a, .alttodoc strong {color: #a40000;}
+.todoc a, .todoc strong {color: #a40000;}
+.todoc a:hover, .alttodoc a:hover {color: #FFEDD4;background-color: #a40000;text-decoration: none;}
+
+
+/**** Comment forms for the home list ****/
+#todo form {display: block;}
+#todo fieldset {padding: 10px 15px;border: none;background: transparent url(images/anglepattern.gif) repeat top left;}
+#todo legend {color: #ffedd4;font-weight: bold;font-size: 110%;display: block;padding: 45px 0 0 5px;}
+#todo label {display: block;padding: 20px 0 5px 0;font-weight: bold;}
+#todo input {display: block;}
+#todo .cforms a, #complete ol li a {color: #a40000;}
+#todo #complete ol li a:hover {text-decoration: none;}
+#todo .cforms a:hover {text-decoration: none;color: #3f0000;}
+#todo .submitb {padding-top: 5px;}
+
+
+/**** Comment forms for the completed page ****/
+
+
+
+/**** SLIMBOX ****/
+#lbOverlay {position: absolute;left: 0;width: 100%;background-color: #01011B;cursor: pointer;}
+#lbCenter {position: absolute;left: 50%;overflow: hidden;background-color: #1C1C6B;}
+#lbBottomContainer {position: absolute;left: 50%;background-color: #1C1C6B;}
+.lbLoading {background: #1C1C6B url(images/ajax-loader-1.gif) no-repeat center;}
+#lbImage {border: 10px solid #1C1C6B;background-repeat: no-repeat;}
+#lbPrevLink, #lbNextLink {display: block;position: absolute;top: 0;width: 50%;outline: none;z-index: 200;}
+#lbPrevLink {left: 0;background: transparent url(images/prevlabel.gif) no-repeat 0% 15%;}
+#lbPrevLink:hover {background: transparent url(images/prevlabel.gif) no-repeat 0% 15%;}
+#lbNextLink {right: 0;background: transparent url(images/nextlabel.gif) no-repeat 100% 15%;}
+#lbNextLink:hover {background: transparent url(images/nextlabel.gif) no-repeat 100% 15%;}
+#lbBottom {font-size: 10px;color: #fff;text-align: left;border: 10px solid #1C1C6B;border-top-style: none;}
+#lbCloseLink {display: block;float: right;width: 66px;height: 22px;background: transparent url(images/closelabel.gif) no-repeat center;margin: 5px 0;}
+#lbCaption, #lbNumber {margin-right: 71px;}
+#lbCaption {font-weight: bold;}
