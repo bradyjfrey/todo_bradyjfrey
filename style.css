@@ -7,16 +7,20 @@ Author: Brady J. Frey
 */
 
 * {padding: 0;margin: 0;}
-body {font-size: 80%;line-height: 125%;text-align: left;font-family: gotham,helvetica,verdana;}
+body {font-size: 80%;line-height: 125%;text-align: left;font-family: 'Montserrat',gotham,helvetica,verdana;}
 #todo {background-color: #180000;color: #FFEDD4;}
 #completed {background-color: #01011B;color: #FFEDD4;}
-h1 a {width: 100%;height: 145px;display: block;text-indent: -9999px;text-decoration: none;}
-h2 {width: 100%;height: 31px;display: block;text-indent: -9999px;}
+h1 a {display: block;text-decoration: none;font-size: 46px;font-weight: 300;padding: 60px 0 60px 64px;color: #FFEDD4;white-space: nowrap;overflow: hidden;}
+h2 {display: block;font-size: 11px;font-weight: 300;padding: 7px 0 7px 64px;color: #A40000;}
+h2 strong {font-weight: 600;}
+h2 em {font-style: normal;}
+#todo h1 a {background-color: #A40000;}
+#todo h1 .accent {color: #FF0000;}
+#todo h2 {background-color: #3F0000;}
 #completed h5 {color: #3B3BA0;font-size: 18px;padding: 15px 0 0 0;}
-#todo h1 a {background: #A40000 url(images/header.gif) no-repeat top left;}
-#todo h2 {background: #3F0000 url(images/header_sub.gif) no-repeat top left;}
-#completed h1 a {background: #3B3BA0 url(images/completed_header.gif) no-repeat top left;}
-#completed h2 {background: #1C1C6B url(images/completed_header_sub.gif) no-repeat top left;}
+#completed h1 a {background-color: #3B3BA0;}
+#completed h1 .accent {color: #5f60e4;}
+#completed h2 {background-color: #1C1C6B;color: #3B3BA0;}
 #completed h3 {font-weight: normal;font-size: 24px;padding: 0 0 10px 0;}
 #completed h3 strong {color: #3B3BA0;font-weight: normal;}
 #completed h4 {font-weight: bold;color: #3B3BA0;font-size: 18px;padding: 0 0 20px 0;}
@@ -36,8 +40,11 @@ img {border: none;}
 #completed blockquote {background: #0B0B4E url(images/quote.gif) no-repeat top left;padding: 5px 10px;font-weight: bold;}
 #todo #copyright {font-size: 10px;background: #3F0000;color: black;text-align: center;padding: 10px 0;width: 100%;clear: both;}
 #completed #copyright {font-size: 10px;background: #08083C;color: #3B3BA0;text-align: center;padding: 10px 0;width: 100%;clear: both;}
-.readmore a {position: relative;right: 10px;background: #180000 url(images/readtheadventure.gif) no-repeat top left;text-indent: -9999px;display: block;width: 151px;height: 26px;}
-.readmore a:hover {background-position: bottom left;}
+.readmore a {display: inline-block;font-size: 13px;line-height: 1;padding: 0 8px;font-weight: 400;color: #FFEDD4;text-decoration: none;margin-left: -8px;}
+.readmore a strong {font-weight: 600;}
+.readmore a .chevron {font-size: 36px;font-weight: 600;color: #A40000;display: inline-block;vertical-align: middle;padding-left: 4px;margin-top: -8px;}
+.readmore a:hover {background-color: #A40000;}
+.readmore a:hover .chevron {color: #000;}
 
 
 /**** Completed full page ****/
@@ -62,9 +69,9 @@ img {border: none;}
 #single {padding: 23px 64px;}
 #brady, #sheryl, #complete {padding: 20px 0;width: 300px;position: relative;left: 64px;}
 #brady, #sheryl, #complete {float: left;clear: right;}
-#brady h4, #sheryl h4, #complete h4 {width: 134px;height: 22px;display: block;text-indent: -9999px;background: #180000 url(images/header_brady.gif) no-repeat top left;padding: 10px 0 0 0;}
-#sheryl h4 {width: 140px;background-image: url(images/header_sheryl.gif);}
-#complete h4 {width: 129px;background-image: url(images/header_completed.gif);}
+#brady h4, #sheryl h4, #complete h4 {display: block;font-size: 23px;font-weight: 400;color: #FFEDD4;padding: 10px 0 13px 0;}
+#brady h4 .accent, #sheryl h4 .accent {color: #A40000;font-weight: 300;}
+#complete h4 {color: #A40000;}
 #brady ol, #sheryl ol, #complete ol {padding: 0 20px 20px 20px;}
 #brady ol li, #sheryl ol li {padding: 2px 5px 2px 0;color: #A40000;}
 #complete ol li {padding: 2px 5px 15px 0;color: #A40000;}
@@ -87,7 +94,7 @@ img {border: none;}
 #todo legend {color: #ffedd4;font-weight: bold;font-size: 110%;display: block;padding: 45px 0 0 5px;}
 #todo label {display: block;padding: 20px 0 5px 0;font-weight: bold;}
 #todo input {display: block;}
-#todo .cforms a, #complete ol li a {color: #a40000;}
+#todo .cforms a {color: #a40000;}
 #todo #complete ol li a:hover {text-decoration: none;}
 #todo .cforms a:hover {text-decoration: none;color: #3f0000;}
 #todo .submitb {padding-top: 5px;}
